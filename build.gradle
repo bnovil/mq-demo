@@ -1,0 +1,17 @@
+group 'mq-demo'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {url "http://maven.aliyun.com/nexus/content/groups/public/" }
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.rocketmq/rocketmq-client
+    compile group: 'org.apache.rocketmq', name: 'rocketmq-client', version: '4.1.0-incubating'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
